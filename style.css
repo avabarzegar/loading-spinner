@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* loading spinner  */
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.loading-details {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.loading-details::after,
+.loading-details::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    animation: rotate var(--duration) var(--timing) infinite;
+    pointer-events: none;
+}
+
+.loading-details::after {
+    border-left-color: #F9BC1A;
+    --duration: 2s;
+    --timing: ease-in;
+}
+
+.loading-details::before {
+    border-right-color: #20294C;
+    --duration: 2.5s;
+    --timing: ease-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+/* /loading spinner  */

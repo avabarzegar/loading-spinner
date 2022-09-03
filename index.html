@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Loading</title>
+</head>
+
+<body>
+    <!-- loading spinner  -->
+    <div id="loading">
+        <div class="loading-details"></div>
+    </div>
+    <!-- /loading spinner  -->
+    <!-- main codes  -->
+   <main style="text-align:center">
+    <h1>سلاممممم رفیق</h1>
+    <h3>حالت چطوره ؟</h3>
+   </main>
+    <!-- /main codes  -->
+
+
+    <script src="./script.js"></script>
+    <script>
+        window.onload = () => {
+          // JUST DEFINE EMPTY ARRAY [] IF NO CSS/JS TO LOAD
+          loader(
+            ["my.css"],
+            ["my.js", "https://cdnjs.cloudflare.com/ajax/libs/WHATEVER/"]
+          );
+        };
+        </script>
+</body>
+
+</html>
